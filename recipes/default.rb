@@ -13,7 +13,7 @@ service("nginx") do
 end
 
 template "/etc/nginx/sites-available/proxy.conf" do
-  source "./proxy.conf"
+  source "proxy.conf.erb"
 end
 
 link "/etc/nginx/sites-enabled/proxy.conf" do
