@@ -23,3 +23,7 @@ end
 link "/etc/nginx/sites-enabled/default" do
   action :delete
 end
+
+service("nginx") do
+  action :restart
+end
