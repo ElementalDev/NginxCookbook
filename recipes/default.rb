@@ -14,12 +14,10 @@ end
 
 template "/etc/nginx/sites-available/proxy.conf" do
   source "./proxy.conf"
-  action :create
 end
 
 link "/etc/nginx/sites-enabled/proxy.conf" do
   to "/etc/nginx/sites-available/proxy.conf"
-  action :create
 end
 
 link "/etc/nginx/sites-enabled/default" do
