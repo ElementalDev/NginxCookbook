@@ -19,6 +19,10 @@ describe 'nginx::default' do
       expect { chef_run }.to_not raise_error
     end
 
+    it "should update all packages" do
+      expect(chef_run).to update_apt_update("update")
+    end
+
     it "should install nginx" do
       expect(chef_run).to install_package("nginx")
     end
